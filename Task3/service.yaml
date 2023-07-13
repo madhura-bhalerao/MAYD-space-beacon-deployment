@@ -1,0 +1,15 @@
+# File: /service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "space-beacon.fullname" . }}
+  labels:
+    app: {{ include "space-beacon.name" . }}
+spec:
+  selector:
+    app: {{ include "space-beacon.name" . }}
+  ports:
+    - protocol: TCP
+      port: {{ .Values.service.port }}
+      targetPort: http
+  type: {{ .Values.service.type }}
