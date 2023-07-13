@@ -1,0 +1,10 @@
+aws_region             = "us-west-2"
+aws_version            = "3.57.0"
+vpc_cidr_block         = "10.0.0.0/16"
+subnet_cidr_block      = "10.0.0.0/24"
+availability_zone      = "us-west-2a"
+eks_module_version     = "20.1.0"
+cluster_name           = "outpost-cluster"
+workers_min_count      = 1
+workers_max_count      = 3
+workers_instance_type  = "t3.medium"

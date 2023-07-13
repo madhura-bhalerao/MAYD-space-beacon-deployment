@@ -1,0 +1,19 @@
+# File: /values.yaml
+replicaCount: 1
+image:
+  repository: your-username/devops-squadron-app
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: LoadBalancer
+  port: 80
+
+ingress:
+  enabled: false
+  annotations: {}
+  hosts:
+    - host: space-beacon.example.com
+      paths: [/]
+
+resources: {}
